@@ -18,6 +18,8 @@ export default function MealItem({
   summary,
   creator,
 }: TMeal) {
+  console.log(image);
+
   return (
     <article className={classes.meal}>
       <header>
