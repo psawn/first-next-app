@@ -9,6 +9,8 @@ export type TMeal = {
   image: string;
   summary: string;
   creator: string;
+  creator_email: string;
+  instructions: string;
 };
 
 export default function MealItem({
@@ -18,8 +20,6 @@ export default function MealItem({
   summary,
   creator,
 }: TMeal) {
-  console.log(image);
-
   return (
     <article className={classes.meal}>
       <header>
