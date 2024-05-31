@@ -6,11 +6,12 @@ export type TMeal = {
   id: string;
   title: string;
   slug: string;
-  image: string;
+  image: any;
   summary: string;
   creator: string;
   creator_email: string;
   instructions: string;
+  fileImage: File;
 };
 
 export default function MealItem({

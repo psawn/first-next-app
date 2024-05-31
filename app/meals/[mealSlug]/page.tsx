@@ -5,6 +5,19 @@ import { TMeal } from "@/component/meals/meal-item";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import { notFound } from "next/navigation";
 
+export async function generateMetadata({ params }: { params: Params }) {
+  const meal = getMeal(params?.mealSlug) as TMeal;
+
+  if (!meal) {
+    notFound();
+  }
+
+  return {
+    title: meal.title,
+    description: meal.summary,
+  };
+}
+
 export default function MealDetailsPage({ params }: { params: Params }) {
   const meal = getMeal(params?.mealSlug) as TMeal;
 

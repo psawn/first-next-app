@@ -11,12 +11,18 @@ function Meals() {
   return <MealsGrid meals={meals} />;
 }
 
+export const metadata = {
+  title: "All meals for you",
+  description: "Browse meals.",
+};
+
 export default function MealsPage() {
   return (
     <>
       <header className={classes.header}>
         <h1>
-          Delicouse meals, created <span className={classes.highlight}>by you</span>
+          Delicouse meals, created{" "}
+          <span className={classes.highlight}>by you</span>
         </h1>
         <p>Chose recipe</p>
         <h1 className={classes.cta}>
